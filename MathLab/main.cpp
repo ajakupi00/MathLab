@@ -1,14 +1,19 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "CoordinateSystem.h"
 using namespace std;
 using namespace sf;
 
+const int WINDOWS_HEIGHT = 800;
+const int WINDOWS_WIDTH = 800;
 
 int main()
 {
-    RenderWindow window(VideoMode(200, 200), "SFML works!");
-    CircleShape shape(100.f);
-    shape.setFillColor(Color::Green);
+    RenderWindow window(VideoMode(WINDOWS_WIDTH, WINDOWS_HEIGHT), "MathLab");
+    CoordinateSystem coordinate(WINDOWS_HEIGHT, WINDOWS_WIDTH);
+
+    VertexArray xLine(Lines, 2);
+
 
     while (window.isOpen())
     {
@@ -20,7 +25,12 @@ int main()
         }
 
         window.clear();
-        window.draw(shape);
+        window.draw(coordinate.vertexCoordinate());
+        window.draw(coordinate.xLines());
+        window.draw(coordinate.yLines());
+        window.draw(coordinate.zero());
+
+
         window.display();
     }
 
