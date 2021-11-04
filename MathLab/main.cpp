@@ -6,7 +6,7 @@ using namespace sf;
 
 int main()
 {
-    RenderWindow window(VideoMode(200, 200), "SFML works!");
+    RenderWindow window(VideoMode(200, 200), "MathLab");
     CircleShape shape(100.f);
     shape.setFillColor(Color::Green);
 
