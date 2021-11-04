@@ -1,0 +1,2 @@
+﻿  main.cpp
+C:\Users\arjan\source\repos\MathLab\MathLab\main.cpp(2,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
