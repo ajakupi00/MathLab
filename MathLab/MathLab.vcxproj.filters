@@ -21,9 +21,15 @@
     <ClCompile Include="CoordinateSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Parabola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordinateSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Parabola.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

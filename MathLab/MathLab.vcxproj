@@ -153,9 +153,11 @@
   <ItemGroup>
     <ClCompile Include="CoordinateSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parabola.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordinateSystem.h" />
+    <ClInclude Include="Parabola.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
