@@ -2,17 +2,16 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "CoordinateSystem.h"
+#include "Shapes.h"
 using namespace std;
 using namespace sf;
 
-class Parabola
+class Parabola: Shapes
 {
 private:
-	int windows_height;
-	int windows_width;
-	int num_of_lines;
 public:
-	Parabola(int win_height, int win_width, int num_of_lines);
-	VertexArray DrawParabola(int detail);
+	Parabola(int w, int h, int n, int d);
+	VertexArray vShape();
+	/*VertexArray DrawParabola(int detail);*/
 };
 

@@ -4,18 +4,15 @@
 using namespace std;
 using namespace sf;
 
-Parabola::Parabola(int win_height, int win_width, int num_of_lines)
+Parabola::Parabola(int w, int h, int n, int d) : Shapes(w, h, n, d)
 {
-	windows_height = win_height;
-	windows_width = win_width;
-	this->num_of_lines = num_of_lines;
 }
 
-VertexArray Parabola::DrawParabola(int detail)
+VertexArray Parabola::vShape()
 {
-	int numOfLines = this->num_of_lines;
+	int numOfLines = num_of_lines;
 	VertexArray parabola(LineStrip, (numOfLines * detail) + 1);
-
+	
 	int c = 0;
 	for (float i = -10; i <= 10; i += (1.f/ detail))
 	{
@@ -25,8 +22,6 @@ VertexArray Parabola::DrawParabola(int detail)
 		parabola[c].color = Color::White;
 		c++;
 	}
-
-
+	
 	return parabola;
-
 }

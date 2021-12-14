@@ -1,10 +1,12 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "CoordinateSystem.h"
+#include "Shapes.h"
 #include "Parabola.h"
 using namespace std;
 using namespace sf;
 
+//  WINDOW SETTINGS
 const int WINDOWS_HEIGHT = 800;
 const int WINDOWS_WIDTH = 800;
 const int NUM_OF_LINES = 20;
@@ -12,8 +14,11 @@ const int NUM_OF_LINES = 20;
 int main()
 {
     RenderWindow window(VideoMode(WINDOWS_WIDTH, WINDOWS_HEIGHT), "MathLab");
+
+    //  ENTITIES
     CoordinateSystem coordinate(WINDOWS_HEIGHT, WINDOWS_WIDTH, NUM_OF_LINES);
-    Parabola parabola(WINDOWS_HEIGHT, WINDOWS_WIDTH, NUM_OF_LINES);
+    Parabola parabola(WINDOWS_WIDTH, WINDOWS_HEIGHT, NUM_OF_LINES, 2);
+
 
     while (window.isOpen())
     {
@@ -28,7 +33,8 @@ int main()
         window.draw(coordinate.vertexCoordinate());
         window.draw(coordinate.xLines());
         window.draw(coordinate.yLines());
-        window.draw(parabola.DrawParabola(5));
+        window.draw(parabola.vShape());
+
         
 
 
