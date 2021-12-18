@@ -3,6 +3,7 @@
 #include "CoordinateSystem.h"
 #include "Shapes.h"
 #include "Parabola.h"
+#include "nRoot.h"
 using namespace std;
 using namespace sf;
 
@@ -17,9 +18,8 @@ int main()
 
     //  ENTITIES
     CoordinateSystem coordinate(WINDOWS_HEIGHT, WINDOWS_WIDTH, NUM_OF_LINES);
-    Parabola parabola(WINDOWS_WIDTH, WINDOWS_HEIGHT, NUM_OF_LINES, 2);
-
-
+    //Parabola parabola(WINDOWS_WIDTH, WINDOWS_HEIGHT, NUM_OF_LINES, 2);
+    nRoot nroot(WINDOWS_WIDTH, WINDOWS_HEIGHT, NUM_OF_LINES, 4, 0, -1);
     while (window.isOpen())
     {
         Event event;
@@ -33,7 +33,8 @@ int main()
         window.draw(coordinate.vertexCoordinate());
         window.draw(coordinate.xLines());
         window.draw(coordinate.yLines());
-        window.draw(parabola.vShape());
+        //window.draw(parabola.vShape());
+        window.draw(nroot.vShape());
 
         
 

@@ -153,11 +153,13 @@
   <ItemGroup>
     <ClCompile Include="CoordinateSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="nRoot.cpp" />
     <ClCompile Include="Parabola.cpp" />
     <ClCompile Include="Shapes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoordinateSystem.h" />
+    <ClInclude Include="nRoot.h" />
     <ClInclude Include="Parabola.h" />
     <ClInclude Include="Shapes.h" />
   </ItemGroup>

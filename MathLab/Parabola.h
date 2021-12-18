@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "CoordinateSystem.h"
 #include "Shapes.h"
 using namespace std;
 using namespace sf;
