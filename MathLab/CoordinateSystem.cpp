@@ -2,10 +2,11 @@
 
 
 
-CoordinateSystem::CoordinateSystem(int windows_height, int windows_width)
+CoordinateSystem::CoordinateSystem(int windows_height, int windows_width, int num_of_lines)
 {
 	this->windows_height = windows_height;
 	this->windows_width = windows_width;
+	this->num_of_lines = num_of_lines;
 }
 
 VertexArray CoordinateSystem::vertexCoordinate()
@@ -24,9 +25,8 @@ VertexArray CoordinateSystem::vertexCoordinate()
 
 VertexArray CoordinateSystem::xLines()
 {
-	int numberOfLines = 40;
-	VertexArray xLines(Lines, pow(numberOfLines, 2));
-
+	int numberOfLines = this->num_of_lines * 2;
+	VertexArray xLines(Lines, numberOfLines);
 	for (int i = 0; i < numberOfLines; i += 2)
 	{	
 		float xPos = i * (windows_width / (float)numberOfLines);
@@ -39,9 +39,8 @@ VertexArray CoordinateSystem::xLines()
 
 VertexArray CoordinateSystem::yLines()
 {
-	int numberOfLines = 40;
-	VertexArray yLines(Lines, pow(numberOfLines, 2));
-
+	int numberOfLines = this->num_of_lines * 2;
+	VertexArray yLines(Lines, numberOfLines);
 	for (int i = 0; i < numberOfLines; i += 2)
 	{
 		float yPos = i * (windows_height / (float)numberOfLines);
@@ -50,16 +49,5 @@ VertexArray CoordinateSystem::yLines()
 	}
 
 	return yLines;
-}
-
-CircleShape CoordinateSystem::zero()
-{
-	float circleSize = 5.f;
-	CircleShape zero(circleSize);
-
-	zero.setFillColor(Color::White);
-	zero.setPosition(Vector2f((windows_width / 2) - circleSize, (windows_height / 2) - circleSize));
-
-	return zero;
 }
 

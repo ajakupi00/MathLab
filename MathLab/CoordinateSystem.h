@@ -9,13 +9,16 @@ class CoordinateSystem
 private:
 	int windows_height;
 	int windows_width;
-
+	int num_of_lines;
 public:
-	CoordinateSystem(int windows_height, int windows_width);
+	CoordinateSystem(int windows_height, int windows_width, int num_of_lines);
 	VertexArray vertexCoordinate();
 	VertexArray xLines();
 	VertexArray yLines();
-	CircleShape zero();
+	/*
+	TODO:
+		- Dodat brojeve
+	*/
 	
 };
 
